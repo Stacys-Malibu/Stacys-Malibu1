@@ -16,7 +16,7 @@ import androidx.navigation.ui.NavigationUI;
 import android.view.Menu;
 import android.view.MenuItem;
 
-public class Menu_activity extends AppCompatActivity {
+public class MenuAdmiActivity extends AppCompatActivity {
 
     private AppBarConfiguration appBarConfiguration;
 
