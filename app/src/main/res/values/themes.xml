@@ -2,11 +2,11 @@
     <!-- Base application theme. -->
     <style name="Theme.Stacy" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
         <!-- Primary brand color. -->
-        <item name="colorPrimary">@color/red_200</item>
+        <item name="colorPrimary">@color/white</item>
         <item name="colorPrimaryVariant">@color/black_rusia</item>
-        <item name="colorOnPrimary">@color/white</item>
+        <item name="colorOnPrimary">@color/red_200</item>
         <!-- Secondary brand color. -->
-        <item name="colorSecondary">@color/black_rusia</item>
+        <item name="colorSecondary">@color/red_200</item>
         <item name="colorSecondaryVariant">@color/white</item>
         <item name="colorOnSecondary">@color/black</item>
         <!-- Status bar color. -->

@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".LoginActivity">
+    android:theme="@style/Theme.Stacy.PopupOverlay"
+    tools:context=".MainActivity">
 
 
     <LinearLayout
@@ -59,7 +60,6 @@
             android:layout_height="70dp"
             android:layout_gravity="center"
             android:layout_marginTop="15dp"
-            android:background="@drawable/botton_red"
             android:text="Ingresar"
             android:textStyle="bold" />
 
