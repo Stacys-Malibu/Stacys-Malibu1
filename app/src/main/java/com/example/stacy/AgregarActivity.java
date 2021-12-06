@@ -1,7 +1,9 @@
 package com.example.stacy;
 
 import android.app.ProgressDialog;
+import android.content.Intent;
 import android.os.Bundle;
+import android.os.Handler;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -17,25 +19,22 @@ import com.android.volley.VolleyError;
 import com.android.volley.toolbox.JsonObjectRequest;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
+import com.vishnusivadas.advanced_httpurlconnection.PutData;
 
 import org.json.JSONObject;
 
 import java.util.HashMap;
 import java.util.Map;
 
-public class AgregarActivity extends AppCompatActivity implements Response.Listener<JSONObject>, Response.ErrorListener {
-    EditText apellidoP , apellidoM, nombre1, nombre2,ci,rda,codigoUser, tipoExamen, area,carrera,
-    departamento, categoríaPostula, calificacionFinal;
+public class AgregarActivity extends AppCompatActivity {
+    EditText apellidoP , apellidoM, nombre1, nombre2,ci,rda, tipoExamen, area,carrera,
+            departamento, categoríaPostula, calificacionFinal, password;
     Button btnAgregar;
-    ProgressDialog progreso;
-    RequestQueue requestQueue;
-    JsonObjectRequest jsonObjectRequest;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.agregarusuario_layout);
-        codigoUser=(EditText) findViewById(R.id.codigoUser);
+
         apellidoP=(EditText) findViewById(R.id.apellidoP);
         apellidoM=(EditText) findViewById(R.id.apellidoM);
         nombre1=(EditText) findViewById(R.id.nombre1);
@@ -48,61 +47,93 @@ public class AgregarActivity extends AppCompatActivity implements Response.Liste
         departamento=(EditText) findViewById(R.id.departamento);
         categoríaPostula=(EditText) findViewById(R.id.categoriaPostula);
         calificacionFinal=(EditText) findViewById(R.id.calificacionFinal);
+        password=(EditText) findViewById(R.id.codigoUser) ;
         btnAgregar=(Button) findViewById(R.id.anadir);
-        requestQueue= Volley.newRequestQueue(getApplicationContext());
-
-        /*btnAgregar.setOnClickListener(new View.OnClickListener() {
+        btnAgregar.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v) {
-                ejecutarServicio();
+            public void onClick(View view) {
+
+                //Starting Write and Read data with URL
+                //Creating array for parameters
+                String ApellidoPaterno,ApellidoMaterno, Nombre1, Nombre2, CI,
+                        RDA, TipoExamen, Area, Carrera, Departamento, CategoriaPostula, CalificacionFinal ,Password;
+                ApellidoPaterno= String.valueOf(apellidoP.getText());
+                ApellidoMaterno= String.valueOf(apellidoM.getText());
+                Nombre1= String.valueOf(nombre1.getText());
+                Nombre2= String.valueOf(nombre2.getText());
+                CI= String.valueOf(ci.getText());
+                RDA= String.valueOf(rda.getText());
+                TipoExamen= String.valueOf(tipoExamen.getText());
+                Area= String.valueOf(area.getText());
+                Carrera= String.valueOf(carrera.getText());
+                Departamento= String.valueOf(departamento.getText());
+                CategoriaPostula= String.valueOf(categoríaPostula.getText());
+                CalificacionFinal= String.valueOf(calificacionFinal.getText());
+                Password= String.valueOf(password.getText());
+
+                if(ApellidoPaterno.equals("")&& ApellidoMaterno.equals("")&&Nombre1.equals("")
+                        && Nombre2.equals("")&&CI.equals("")&&RDA.equals("")&&TipoExamen.equals("")&&Area.equals("")&&
+                        Carrera.equals("")&&Departamento.equals("")&&CategoriaPostula.equals("")&&CalificacionFinal.equals("")&&Password.equals("")){
+                    //Start ProgressBar first (Set visibility VISIBLE)
+                    Handler handler = new Handler();
+                    handler.post(new Runnable() {
+                        @Override
+                        public void run() {
+                            String[] field = new String[13];
+                            field[0] = "ApellidoPaterno";
+                            field[1] = "ApellidoMaterno";
+                            field[2] = "Nombre1";
+                            field[3] = "Nombre2";
+                            field[4] = "CI";
+                            field[5] = "RDA";
+                            field[6] = "TipoExamen";
+                            field[7] = "Area";
+                            field[8] = "Carrera";
+                            field[9] = "Departamento";
+                            field[10] = "CategoriaPostula";
+                            field[11] = "CalificacionFinal";
+                            field[12] = "Password";
+                            //Creating array for data
+                            String[] data = new String[13];
+                            data[0] = ApellidoPaterno;
+                            data[1] = ApellidoMaterno;
+                            data[2] = Nombre1;
+                            data[3] = Nombre2;
+                            data[4] = CI;
+                            data[5] = RDA;
+                            data[6] = TipoExamen;
+                            data[7] = Area;
+                            data[8] = Carrera;
+                            data[9] = Departamento;
+                            data[10] = CategoriaPostula;
+                            data[11] = CalificacionFinal;
+                            data[12] = Password;
+                            PutData putData = new PutData("http://192.168.40.1/Login/signup.php", "POST", field, data);
+                            if (putData.startPut()) {
+                                if (putData.onComplete()) {
+                                    String result = putData.getResult();
+                                    if(result.equals("Sign Up Success")){
+                                        Intent intent =new Intent(getApplicationContext(), MenuAdmiActivity.class);
+                                        startActivity(intent);
+                                        finish();
+
+                                    }else{
+                                        Toast.makeText(getApplicationContext(),result,Toast.LENGTH_SHORT).show();
+                                    }
+                                }
+                            }
+                            //End Write and Read data with URL
+                        }
+                    });
+                }else{
+                    Toast.makeText(getApplicationContext(),"All files required",Toast.LENGTH_SHORT).show();
+                }
+
+
             }
-        });*/
-    }
-    /*private void ejecutarServicio(){
-        String URL="http://192.168.0.5:80/MEyD/insertar.php";
-        StringRequest stringRequest = new StringRequest(Request.Method.POST, URL, new Response.Listener<String>() {
-            @Override
-            public void onResponse(String response) {
-                Toast.makeText(getApplicationContext(),"OPERACION EXITOSA",Toast.LENGTH_SHORT).show();
-            }
-    }, new Response.ErrorListener(){
-            @Override
-            public void onErrorResponse(VolleyError error){
-                Toast.makeText(getApplicationContext(), error.toString(), Toast.LENGTH_SHORT).show();
-            }
-        }){
-            @Override
-            protected Map<String, String> getParams() throws AuthFailureError {
-                Map<String,String> parametros= new HashMap<String, String>();
-                parametros.put("codigoUser",codigoUser.getText().toString());
-                parametros.put("apellidoP",apellidoP.getText().toString());
-                parametros.put("apellidoM",apellidoM.getText().toString());
-                parametros.put("nombre1",nombre1.getText().toString());
-                parametros.put("nombre2",nombre2.getText().toString());
-                parametros.put("ci",ci.getText().toString());
-                parametros.put("rda",rda.getText().toString());
-                parametros.put("tipoExamen",tipoExamen.getText().toString());
-                parametros.put("area",area.getText().toString());
-                parametros.put("carrera",carrera.getText().toString());
-                parametros.put("departamento",departamento.getText().toString());
-                parametros.put("categoriaPostula",categoríaPostula.getText().toString());
-                parametros.put("calificacionFinal",calificacionFinal.getText().toString());
+        });
 
-                return parametros;
-            }
-        };
-        RequestQueue requestQueue= Volley.newRequestQueue(this);
-        requestQueue.add(stringRequest);
 
-    }*/
-
-    @Override
-    public void onErrorResponse(VolleyError error) {
-
-    }
-
-    @Override
-    public void onResponse(JSONObject response) {
 
     }
 }

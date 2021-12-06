@@ -46,7 +46,7 @@
         android:rotationX="-4">
 
         <Button
-            android:id="@+id/textView"
+            android:id="@+id/examenes"
             android:layout_width="match_parent"
             android:layout_height="75dp"
             android:layout_margin="20dp"
@@ -68,7 +68,7 @@
         android:orientation="vertical">
 
         <Button
-            android:id="@+id/button"
+            android:id="@+id/participantes"
             android:layout_width="match_parent"
             android:layout_height="80dp"
             android:layout_marginLeft="5dp"

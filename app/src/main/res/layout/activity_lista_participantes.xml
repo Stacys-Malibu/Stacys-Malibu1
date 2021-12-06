@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:theme="@style/Theme.AppCompat.DayNight.DarkActionBar"
+    tools:context=".ListaParticipantes">
+    <LinearLayout
+        android:id="@+id/buttons"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal">
+        <Button
+            android:id="@+id/addButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="50"
+            android:layout_marginRight="5dp"
+            android:background="@color/black_rusia"
+            android:textColor="#ffff"
+            android:text="Añadir Participante" />
+
+        <Button
+            android:id="@+id/deleteButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="50"
+            android:layout_marginLeft="5dp"
+            android:textColor="#ffff"
+            android:text="Borrar Participante" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/buscar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:orientation="horizontal">
+        <EditText
+            android:id="@+id/wordEditText"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/red_200"
+            android:hint="Código Participante"
+            android:textColor="@color/white"
+            android:layout_marginBottom="5dp"
+            android:textSize="20dp"
+            android:padding="10dp"
+            android:layout_weight="1">
+        </EditText>
+        <Button
+            android:id="@+id/searchButton"
+            android:layout_width="wrap_content"
+            android:layout_gravity="center"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:hint="Buscar">
+        </Button>
+    </LinearLayout>
+
+
+    <ListView
+        android:id="@+id/taskListView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/buttons"
+        android:layout_below="@+id/buscar"
+        android:layout_marginTop="2dp"
+        android:layout_marginBottom="-2dp"
+        android:divider="@color/red_200"
+        android:dividerHeight="1dp" />
+
+</RelativeLayout>
