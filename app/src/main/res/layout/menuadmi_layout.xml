@@ -11,8 +11,7 @@
         android:id="@+id/appBarLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="#9b1d20"
-        android:theme="@style/Theme.Stacy.AppBarOverlay">
+        android:background="#9b1d20">
 
     </com.google.android.material.appbar.AppBarLayout>
 
@@ -46,7 +45,7 @@
         android:rotationX="-4">
 
         <Button
-            android:id="@+id/examenes"
+            android:id="@+id/buttonExamenes"
             android:layout_width="match_parent"
             android:layout_height="75dp"
             android:layout_margin="20dp"
@@ -68,10 +67,10 @@
         android:orientation="vertical">
 
         <Button
-            android:id="@+id/participantes"
+            android:id="@+id/buttonParticipantes"
             android:layout_width="match_parent"
             android:layout_height="80dp"
-            android:layout_marginLeft="5dp"
+            android:layout_marginLeft="10dp"
             android:layout_marginTop="20dp"
             android:layout_marginRight="10dp"
             android:background="@color/white"

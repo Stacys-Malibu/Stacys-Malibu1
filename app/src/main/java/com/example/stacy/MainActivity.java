@@ -2,13 +2,11 @@ package com.example.stacy;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.os.Handler;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
-import com.vishnusivadas.advanced_httpurlconnection.PutData;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -16,6 +14,9 @@ public class MainActivity extends AppCompatActivity {
     public static String LOG = MainActivity.class.getName();
     private EditText usuario, password;
     private Button buttonStart;
+    private int counter=3;
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,9 +33,44 @@ public class MainActivity extends AppCompatActivity {
         buttonStart.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String  CI,Password;
-                CI= String.valueOf(usuario.getText());
-                Password= String.valueOf(password.getText());
+                if (usuario.getText().toString().equals("maestro") &&
+                        password.getText().toString().equals("123")) {
+                    Toast.makeText(getApplicationContext(),
+                            "Redirecting...", Toast.LENGTH_SHORT).show();
+                    Intent intent = new Intent(getApplicationContext(), MenuMaestroActivity.class);
+                    startActivity(intent);
+                }else if (usuario.getText().toString().equals("admi") &&
+                        password.getText().toString().equals("456")) {
+                    Toast.makeText(getApplicationContext(),
+                            "Redirecting...", Toast.LENGTH_SHORT).show();
+                    Intent intent = new Intent(getApplicationContext(), MenuAdmiActivity.class);
+                    startActivity(intent);
+                }else if (usuario.getText().toString().equals("123456") &&
+                        password.getText().toString().equals("789")) {
+                    Toast.makeText(getApplicationContext(),
+                            "Redirecting...", Toast.LENGTH_SHORT).show();
+                    Intent intent = new Intent(getApplicationContext(), MenuActivity.class);
+                    startActivity(intent);
+                } else if (usuario.getText().toString().equals("654321") &&
+                        password.getText().toString().equals("789")) {
+                    Toast.makeText(getApplicationContext(),
+                            "Redirecting...", Toast.LENGTH_SHORT).show();
+                    Intent intent = new Intent(getApplicationContext(), Menu2Activity.class);
+                    startActivity(intent);
+                }else {
+                    Toast.makeText(getApplicationContext(), "incorrecto ", Toast.LENGTH_SHORT).show();
+
+                    counter--;
+
+                    if (counter == 0) {
+                        buttonStart.setEnabled(false);
+                    }
+                }
+
+
+                /*String  CI,Password;
+                CI= String.valueOf(usuario.getText().toString());
+                Password= String.valueOf(password.getText().toString());
 
                 if(CI.equals("123")&&Password.equals("000")){
                     //Start ProgressBar first (Set visibility VISIBLE)
@@ -49,7 +85,7 @@ public class MainActivity extends AppCompatActivity {
                             String[] data = new String[2];
                             data[0] = CI;
                             data[1] = Password;
-                            PutData putData = new PutData("http://192.168.40.1/Login/login.php", "POST", field, data);
+                            PutData putData = new PutData("http://192.168.0.5/Login/login.php", "POST", field, data);
                             if (putData.startPut()) {
                                 if (putData.onComplete()) {
                                     String result = putData.getResult();
@@ -70,50 +106,14 @@ public class MainActivity extends AppCompatActivity {
                     Toast.makeText(getApplicationContext(),"All files required",Toast.LENGTH_SHORT).show();
                 }
 
-
+            }*/
             }
         });
-
-
-    }
-    private void initViews(){
-        buttonStart = (Button) findViewById(R.id.BotonIngresar);
-        usuario=(EditText) findViewById(R.id.editTextTextPersonName);
-        password=(EditText) findViewById(R.id.editTextTextPassword);
-    }
-    @Override
-    protected void onStart() {
-        super.onStart();
-        Log.e(LOG, "onStart");
     }
 
-    @Override
-    protected void onResume() {
-        super.onResume();
-        Log.e(LOG, "onResume");
-    }
-
-    @Override
-    protected void onPause() {
-        super.onPause();
-        Log.e(LOG, "onPause");
-    }
-
-    @Override
-    protected void onStop() {
-        super.onStop();
-        Log.e(LOG, "onStop");
-    }
-
-    @Override
-    protected void onRestart() {
-        super.onRestart();
-        Log.e(LOG, "onRestart");
-    }
-
-    @Override
-    protected void onDestroy() {
-        super.onDestroy();
-        Log.e(LOG, "onDestroy");
-    }
-}
+            private void initViews() {
+                buttonStart = (Button) findViewById(R.id.BotonIngresar);
+                usuario = (EditText) findViewById(R.id.editTextTextPersonName);
+                password = (EditText) findViewById(R.id.editTextTextPassword);
+            }
+        }

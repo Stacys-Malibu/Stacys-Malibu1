@@ -12,7 +12,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="#9b1d20"
-        android:theme="@style/Theme.Stacy.AppBarOverlay">
+        >
 
     </com.google.android.material.appbar.AppBarLayout>
 
@@ -46,12 +46,12 @@
         android:rotationX="-4">
 
         <Button
-            android:id="@+id/textView"
+            android:id="@+id/examenUser"
             android:layout_width="match_parent"
             android:layout_height="75dp"
             android:layout_margin="20dp"
             android:background="@color/white"
-            android:text="Examenes"
+            android:text="Examen Asignado"
             android:textAlignment="textStart"
             android:textColor="@color/black"
             android:textSize="24dp"
@@ -63,12 +63,12 @@
         android:layout_width="match_parent"
         android:layout_height="300dp"
         android:layout_marginTop="400dp"
-        android:layout_marginLeft="20dp"
+        android:layout_marginLeft="30dp"
         android:layout_marginRight="20dp"
         android:orientation="vertical">
 
         <Button
-            android:id="@+id/button"
+            android:id="@+id/buttonPeril"
             android:layout_width="match_parent"
             android:layout_height="80dp"
             android:layout_marginLeft="5dp"
@@ -86,7 +86,7 @@
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbar"
         android:layout_width="match_parent"
-        android:layout_height="?attr/actionBarSize"
+        android:layout_height="60dp"
         android:background="#9b1d20"
         app:title="Menú"
         app:titleTextColor="@color/white"

@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_vertical"
+    android:orientation="vertical"
+    tools:context=".Exam.pregunta1">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:layout_editor_absoluteX="-38dp"
+        tools:layout_editor_absoluteY="38dp">
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            app:title="Pregunta 1"
+            app:titleTextColor="@color/white"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:background="@color/black_rusia"
+
+            />
+
+        <TextView
+            android:id="@+id/a1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="¿Quién gano el último novel de matemáticas?"
+            android:textSize="30dp"
+            android:layout_margin="20dp"
+            tools:layout_editor_absoluteX="-139dp"
+            tools:layout_editor_absoluteY="131dp" />
+
+        <Button
+            android:id="@+id/b1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Alessio Figalli"
+            android:layout_margin="15dp"
+            android:background="#6b6e75"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+             />
+
+        <Button
+            android:id="@+id/c1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Peter Stholze"
+            android:layout_margin="15dp"
+            android:background="#6b6e75"
+            android:textColor="@color/white"
+            android:textStyle="bold"/>
+
+        <Button
+            android:id="@+id/d1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="No existe el novel de matemáticas"
+            android:layout_margin="15dp"
+            android:background="#6b6e75"
+            android:textColor="@color/white"
+            android:textStyle="bold"/>
+
+        <Button
+            android:id="@+id/sig"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/red_200"
+            android:layout_marginTop="50dp"
+            android:textColor="@color/white"
+            android:layout_marginRight="20dp"
+            android:layout_marginLeft="20dp"
+            android:text="Siguiente" />
+    </LinearLayout>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

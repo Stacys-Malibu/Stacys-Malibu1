@@ -1,17 +1,16 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
     <!-- Base application theme. -->
-    <style name="Theme.Stacy" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
-        <!-- Primary brand color. -->
-        <item name="colorPrimary">@color/white</item>
-        <item name="colorPrimaryVariant">@color/black_rusia</item>
-        <item name="colorOnPrimary">@color/red_200</item>
-        <!-- Secondary brand color. -->
-        <item name="colorSecondary">@color/red_200</item>
-        <item name="colorSecondaryVariant">@color/white</item>
-        <item name="colorOnSecondary">@color/black</item>
-        <!-- Status bar color. -->
-        <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
+    <style name="Theme.Stacy" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+
+    </style>
+    <!-- Defined a new style with three items of color. -->
+    <style name="DemoTheme" parent="Theme.AppCompat.Light.NoActionBar">
         <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/red_200</item>
+
+        <!-- Defining that new color in ColorPrimaryDark -->
+        <item name="colorPrimaryDark">@color/black_rusia</item>
+        <item name="colorAccent">@color/white</item>
     </style>
 
     <style name="Theme.Stacy.NoActionBar">
@@ -19,7 +18,4 @@
         <item name="windowNoTitle">true</item>
     </style>
 
-    <style name="Theme.Stacy.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
-
-    <style name="Theme.Stacy.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
 </resources>

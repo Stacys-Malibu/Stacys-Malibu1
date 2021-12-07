@@ -1,6 +1,5 @@
 package com.example.stacy;
 
-import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -14,31 +13,30 @@ public class MenuMaestroActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.menumaestro_layout);
+        setContentView(R.layout.menuadmi2_layout);
         initViews();
         addEvents();
-
     }
 
     private void addEvents() {
         buttonParticipantes.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent listIntent = new Intent(MenuMaestroActivity.this, AgregarActivity.class);
+                Intent listIntent = new Intent(MenuMaestroActivity.this, ListAgregar2.class);
                 startActivity(listIntent);
             }
         });
         buttonExamenes.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent listIntent = new Intent(MenuMaestroActivity.this, AgregarActivity.class);
+                Intent listIntent = new Intent(MenuMaestroActivity.this, ListExamen2.class);
                 startActivity(listIntent);
             }
         });
     }
 
     private void initViews() {
-        buttonParticipantes = (Button) findViewById(R.id.botonParticipantes);
-        buttonExamenes = (Button) findViewById(R.id.botonExamenes);
+        buttonParticipantes = (Button) findViewById(R.id.buttonParticipantes1);
+        buttonExamenes = (Button) findViewById(R.id.buttonExamenes1);
     }
 }
