@@ -7,37 +7,42 @@ import android.widget.Button;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-public class MenuAdmiActivity extends AppCompatActivity {
+import com.example.stacy.Exam.MainQuiz;
+
+
+public class Menu2Activity extends AppCompatActivity {
     private Button buttonParticipantes;
-    private Button buttonExamenes;
+    private Button buttonExamen;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.menuadmi_layout);
+        setContentView(R.layout.menu_layout);
+
         initViews();
         addEvents();
+
+
     }
 
     private void addEvents() {
         buttonParticipantes.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent listIntent = new Intent(MenuAdmiActivity.this, ListAgregar.class);
+                Intent listIntent = new Intent(Menu2Activity.this, perfil2Activity.class);
                 startActivity(listIntent);
             }
         });
-        buttonExamenes.setOnClickListener(new View.OnClickListener() {
+        buttonExamen.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent listIntent = new Intent(MenuAdmiActivity.this, ListExamen.class);
+                Intent listIntent = new Intent(Menu2Activity.this, MainQuiz.class);
                 startActivity(listIntent);
             }
         });
     }
 
     private void initViews() {
-        buttonParticipantes = (Button) findViewById(R.id.buttonParticipantes);
-        buttonExamenes = (Button) findViewById(R.id.buttonExamenes);
+        buttonParticipantes = (Button) findViewById(R.id.buttonPeril);
+        buttonExamen =(Button) findViewById(R.id.examenUser);
     }
-
 }

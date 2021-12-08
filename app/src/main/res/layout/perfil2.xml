@@ -1,0 +1,259 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/black_rusia"
+    android:theme="@style/Theme.AppCompat.DayNight.DarkActionBar"
+    tools:context=".AgregarActivity">
+
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@color/red_200"
+        app:title="Perfil"
+        app:titleTextColor="@color/white"
+
+        />
+
+    <LinearLayout
+        android:id="@+id/liner"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="70dp"
+            android:layout_marginBottom="10dp"
+            android:background="@color/white"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/imageView2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                tools:srcCompat="@tools:sample/avatars" />
+
+            <TextView
+                android:id="@+id/text1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:minHeight="40dp"
+                android:text="Apellido Paterno" />
+
+            <TextView
+                android:id="@+id/text2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:minHeight="40dp"
+                android:text="Apellido Materno" />
+
+            <TextView
+                android:id="@+id/text3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:minHeight="40dp"
+                android:text="Nombre 1" />
+
+            <TextView
+                android:id="@+id/text4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:minHeight="40dp"
+                android:text="Nombre 2" />
+
+            <TextView
+                android:id="@+id/text5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:minHeight="40dp"
+                android:text="CI" />
+
+            <TextView
+                android:id="@+id/text6"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:minHeight="40dp"
+                android:text="RDA" />
+
+            <TextView
+                android:id="@+id/text7"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:minHeight="40dp"
+                android:text="Código Usuario" />
+
+            <TextView
+                android:id="@+id/text8"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:minHeight="40dp"
+                android:text="Tipo Examen" />
+
+            <TextView
+                android:id="@+id/text9"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:minHeight="40dp"
+                android:text="Carrera" />
+
+            <TextView
+                android:id="@+id/text10"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:minHeight="40dp"
+                android:text="Departamento" />
+
+            <TextView
+                android:id="@+id/text11"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:minHeight="40dp"
+                android:text="Categoria" />
+
+            <TextView
+                android:id="@+id/text12"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:minHeight="40dp"
+                android:text="Calificación Final" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+            android:layout_marginRight="30dp"
+            android:paddingTop="129dp"
+                android:layout_marginBottom="10dp"
+            android:layout_marginTop="70dp"
+                android:background="@color/white"
+                android:orientation="vertical">
+
+
+                <TextView
+                    android:id="@+id/apellidoP"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:hint="M"
+                    android:minHeight="40dp" />
+
+                <TextView
+                    android:id="@+id/apellidoM"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:hint="C'"
+
+                    android:minHeight="40dp" />
+
+                <TextView
+                    android:id="@+id/nombre1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:hint="Juanito"
+                    android:minHeight="40dp" />
+
+                <TextView
+                    android:id="@+id/nombre2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:hint="'S"
+                    android:minHeight="40dp" />
+
+                <TextView
+                    android:id="@+id/ci"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:hint="654321"
+                    android:minHeight="40dp" />
+
+            <TextView
+                android:id="@+id/rda"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="456"
+                android:inputType="textPersonName"
+                android:minHeight="40dp" />
+
+            <TextView
+                android:id="@+id/codigoUser"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="2"
+                android:inputType="textPersonName"
+                android:minHeight="40dp" />
+
+                <TextView
+                    android:id="@+id/tipoExamen"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:hint="RC-MA"
+                    android:minHeight="40dp" />
+
+
+                <TextView
+                    android:id="@+id/carrera"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:hint="Docente"
+                    android:minHeight="40dp" />
+
+                <TextView
+                    android:id="@+id/departamento"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:hint="La Paz"
+                    android:minHeight="40dp" />
+
+                <TextView
+                    android:id="@+id/categoriaPostula"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:hint="Docente primaria"
+                    android:minHeight="40dp" />
+
+                <TextView
+                    android:id="@+id/calificacionFinal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:hint="100"
+                    android:minHeight="40dp" />
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

@@ -7,13 +7,13 @@ import android.widget.Button;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-public class MenuAdmiActivity extends AppCompatActivity {
+public class MenuMaestroActivity extends AppCompatActivity {
     private Button buttonParticipantes;
     private Button buttonExamenes;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.menuadmi_layout);
+        setContentView(R.layout.menuadmi2_layout);
         initViews();
         addEvents();
     }
@@ -22,22 +22,21 @@ public class MenuAdmiActivity extends AppCompatActivity {
         buttonParticipantes.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent listIntent = new Intent(MenuAdmiActivity.this, ListAgregar.class);
+                Intent listIntent = new Intent(MenuMaestroActivity.this, ListAgregar2.class);
                 startActivity(listIntent);
             }
         });
         buttonExamenes.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent listIntent = new Intent(MenuAdmiActivity.this, ListExamen.class);
+                Intent listIntent = new Intent(MenuMaestroActivity.this, ListExamen2.class);
                 startActivity(listIntent);
             }
         });
     }
 
     private void initViews() {
-        buttonParticipantes = (Button) findViewById(R.id.buttonParticipantes);
-        buttonExamenes = (Button) findViewById(R.id.buttonExamenes);
+        buttonParticipantes = (Button) findViewById(R.id.buttonParticipantes1);
+        buttonExamenes = (Button) findViewById(R.id.buttonExamenes1);
     }
-
 }
