@@ -1,43 +1,45 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.stacy">
+    package="com.example.stacy.prueba1">
 
     <uses-permission android:name="android.permission.INTERNET" />
 
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
-        android:label="MEyD"
-        android:usesCleartextTraffic="true"
+        android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
+        android:usesCleartextTraffic="true"
         android:theme="@style/DemoTheme">
-        <activity
-            android:name=".ListAgregar"
-            android:exported="true" />
-        <activity android:name=".MenuActivity" />
-        <activity android:name=".ListAgregar2" />
-        <activity android:name=".AgregarExamen" />
-        <activity android:name=".Exam.MainQuiz" />
-        <activity android:name=".Exam.pregunta1" />
-        <activity android:name=".Exam.Pregunta2" />
-        <activity android:name=".Exam.Pregunta3" />
-        <activity android:name=".Exam.Pregunta4" />
-        <activity android:name=".Exam.Pregunta5" />
-        <activity android:name=".Exam.Score" />
-        <activity android:name=".ListExamen" />
-        <activity android:name=".ListExamen2" />
-        <activity android:name=".perfil2Activity" />
-        <activity android:name=".perfilActivity" />
-        <activity android:name=".MenuAdmiActivity" />
-        <activity android:name=".AgregarActivity" />
-        <activity android:name=".MenuMaestroActivity" />
-        <activity android:name=".MainActivity">
+        <activity android:name=".MenuAdmiActivity"/>
+        <activity android:name=".ListAgregar"/>
+        <activity android:name=".AgregarActivity">
+
+        </activity>
+
+        <activity android:name=".ListAgregar2"/>
+        <activity android:name=".ListExamen2"/>
+        <activity android:name=".Exam.MainQuiz"/>
+        <activity android:name=".Exam.pregunta1"/>
+        <activity android:name=".Exam.Pregunta2"/>
+        <activity android:name=".Exam.Pregunta3"/>
+        <activity android:name=".Exam.Pregunta4"/>
+        <activity android:name=".Exam.Pregunta5"/>
+        <activity android:name=".Exam.Score"/>
+        <activity android:name=".ListExamen"/>
+        <activity android:name=".perfilActivity"/>
+        <activity android:name=".AgregarExamen"/>
+        <activity android:name=".MenuMaestroActivity"/>
+        <activity android:name=".MenuActivity"/>
+        <activity android:name=".MainActivity"
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+
         </activity>
     </application>
 

@@ -23,13 +23,12 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginLeft="10dp"
+        android:layout_marginTop="50dp"
         android:layout_marginRight="10dp"
-        android:layout_marginTop="70dp"
-        android:layout_marginBottom="10dp"
-        android:paddingLeft="5dp"
-        android:paddingTop="15dp"
         android:background="@drawable/whitte"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        android:paddingLeft="5dp"
+        android:paddingTop="15dp">
 
 
         <EditText
@@ -37,72 +36,64 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
+            android:hint="Apellido Paterno"
             android:inputType="textPersonName"
-            android:minHeight="48dp"
-            android:hint="Apellido Paterno" />
+            android:minHeight="48dp" />
 
         <EditText
             android:id="@+id/apellidoM"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
+            android:hint="Apellido Materno"
             android:inputType="textPersonName"
-            android:minHeight="48dp"
-            android:hint="Apellido Materno" />
+            android:minHeight="48dp" />
 
         <EditText
             android:id="@+id/nombre1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
+            android:hint="Nombre 1"
             android:inputType="textPersonName"
-            android:minHeight="48dp"
-            android:hint="Nombre 1" />
+            android:minHeight="48dp" />
 
         <EditText
             android:id="@+id/nombre2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
+            android:hint="Nombre 2"
             android:inputType="textPersonName"
-            android:minHeight="48dp"
-            android:hint="Nombre 2" />
+            android:minHeight="48dp" />
 
         <EditText
             android:id="@+id/ci"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
+            android:hint="Número de CI"
             android:inputType="textPersonName"
-            android:minHeight="48dp"
-            android:hint="Número de CI" />
+            android:minHeight="48dp" />
 
         <EditText
             android:id="@+id/rda"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
+            android:hint="Número de RDA"
             android:inputType="textPersonName"
-            android:minHeight="48dp"
-            android:hint="Número de RDA" />
+            android:minHeight="48dp" />
 
-        <EditText
-            android:id="@+id/codigoUser"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:ems="10"
-            android:inputType="textPersonName"
-            android:minHeight="48dp"
-            android:hint="Número Código Usuario" />
 
         <EditText
             android:id="@+id/tipoExamen"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
+            android:hint="Tipo de Examen"
             android:inputType="textPersonName"
-            android:minHeight="48dp"
-            android:hint="Tipo de Examen" />
+            android:minHeight="48dp" />
 
 
         <EditText
@@ -110,36 +101,53 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
+            android:hint="Carrera (Docente/Administrativo)"
             android:inputType="textPersonName"
-            android:minHeight="48dp"
-            android:hint="Carrera (Docente/Administrativo)" />
+            android:minHeight="48dp" />
 
         <EditText
             android:id="@+id/departamento"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
+            android:hint="Departamento"
             android:inputType="textPersonName"
-            android:minHeight="48dp"
-            android:hint="Departamento" />
+            android:minHeight="48dp" />
 
         <EditText
             android:id="@+id/categoriaPostula"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
+            android:hint="Categoria Postula"
             android:inputType="textPersonName"
-            android:minHeight="48dp"
-            android:hint="Categoria Postula" />
+            android:minHeight="48dp" />
+
+        <EditText
+            android:id="@+id/area"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="Area"
+            android:inputType="textPersonName"
+            android:minHeight="48dp" />
 
         <EditText
             android:id="@+id/calificacionFinal"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
+            android:hint="Calificación Final"
             android:inputType="textPersonName"
-            android:minHeight="48dp"
-            android:hint="Calificación Final" />
+            android:minHeight="48dp" />
+        <EditText
+            android:id="@+id/codigoUser"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="Password"
+            android:inputType="textPersonName"
+            android:minHeight="48dp" />
 
 
         <Button
