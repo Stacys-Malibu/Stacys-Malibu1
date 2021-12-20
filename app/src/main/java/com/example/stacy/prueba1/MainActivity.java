@@ -43,14 +43,17 @@ public class MainActivity extends AppCompatActivity {
                 String pass=password.getText().toString();
                 if(usuariO.equals("")||pass.equals("")){
                     Toast.makeText(MainActivity.this,"Llene los campos",Toast.LENGTH_SHORT).show();
-                }else if(usuariO.equals("123")||pass.equals("123")) {
+                }else if(usuariO.equals("maestro")&& pass.equals("123")) {
                     Intent intent = new Intent(getApplicationContext(),MenuMaestroActivity.class);
                     startActivity(intent);
+                }else if(usuariO.equals("admi")&& pass.equals("123")) {
+                    Intent intent = new Intent(getApplicationContext(),MenuAdmiActivity.class);
+                    startActivity(intent);
                 }else{
-                    Boolean checkUser= BD.checkUsuario(usuariO);
+                    Boolean checkUser= BD.checkUsuario(usuariO,pass);
                     if(checkUser== true){
                         Toast.makeText(MainActivity.this,"Login exitoso",Toast.LENGTH_SHORT).show();
-                        Intent intent = new Intent(getApplicationContext(),MenuMaestroActivity.class);
+                        Intent intent = new Intent(getApplicationContext(),MenuActivity.class);
                         startActivity(intent);
                     }else{
                         Toast.makeText(MainActivity.this,"fallo",Toast.LENGTH_SHORT).show();
