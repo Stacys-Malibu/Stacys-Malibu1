@@ -1,0 +1,24 @@
+name: runOnGitHub
+
+# Controls when the action will run. Triggers the workflow on push or pull request
+# events but only for the master branch
+on:
+  pull_request:
+    branches:
+      - UnitTest
+
+jobs:
+  testing:
+    name: Lint Check and Testing
+
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Clone Repo
+        uses: actions/checkout@v1
+
+
+
+      # Step 4: Yun your unit tests
+      - name: Run Unit Tests
+        run: ./gradlew testStagingDebugUnitTest
