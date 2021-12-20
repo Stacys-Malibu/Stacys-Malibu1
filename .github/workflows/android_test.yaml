@@ -15,7 +15,8 @@ jobs:
       - name: Clone Repo
         uses: actions/checkout@v1
 
-
+      - name: Change wrapper permissions
+        run: chmod +x ./gradlew
 
       # Step 4: Yun your unit tests
       - name: Run Unit Tests
