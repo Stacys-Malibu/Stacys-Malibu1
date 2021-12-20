@@ -6,8 +6,7 @@ on:
   pull_request
 
 jobs:
-  testing:
-    name: Lint Check and Testing
+  build:
 
     runs-on: ubuntu-latest
 
@@ -15,9 +14,11 @@ jobs:
       - name: Clone Repo
         uses: actions/checkout@v1
 
-      - name: Change wrapper permissions
-        run: chmod +x ./gradlew
+      - name: Change wrapper permissions  // 2
+          run: chmod +x ./gradlew
 
-      # Step 4: Yun your unit tests
-      - name: Run Unit Tests
-        run: ./gradlew testStagingDebugUnitTest
+      - name: Run Tests                   // 3
+          run: ./gradlew test
+
+      - name: Build Project               // 4
+          run: ./gradlew assemble
