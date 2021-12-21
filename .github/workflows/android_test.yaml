@@ -20,4 +20,9 @@ jobs:
 
       # Step 4: Yun your unit tests
       - name: Run Unit Tests
-        run: ./gradlew cleanTestDebugUnitTest testDebugUnitTest cleanConnectedDebugAndroidTest connectedDebugAndroidTest --debug
+        run: ./gradlew testDebugUnitTest
+      - name: Upload APK
+        uses: actions/upload-artifact@v2.1.4
+        with:
+          name: Examen
+          path: app/build/outputs/apk/debug/app-debug.apk
