@@ -20,4 +20,4 @@ jobs:
 
       # Step 4: Yun your unit tests
       - name: Run Unit Tests
-        run: ./gradlew testDebugUnitTest
+        run: ./gradlew cleanTestDebugUnitTest testDebugUnitTest cleanConnectedDebugAndroidTest connectedDebugAndroidTest --debug

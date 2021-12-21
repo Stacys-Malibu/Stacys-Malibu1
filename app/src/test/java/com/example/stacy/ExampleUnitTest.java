@@ -37,7 +37,7 @@ public class ExampleUnitTest {
         usuarioList.add(new Usuario(2,"M","Pedro","Matematica"));
         AgregarListViewAdapter agregarListViewAdapter= new AgregarListViewAdapter(null,usuarioList);
 
-        assertEquals(2, agregarListViewAdapter.getItemId(2));
+        assertEquals(usuarioList.get(2).getId(), agregarListViewAdapter.getItemId(2));
     }
     @Test
     public void UsuarioNombre(){
