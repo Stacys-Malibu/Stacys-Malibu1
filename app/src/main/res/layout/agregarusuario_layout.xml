@@ -4,7 +4,7 @@
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:background="@color/black_rusia"
+    android:background="@color/white"
     android:theme="@style/Theme.AppCompat.DayNight.DarkActionBar"
     tools:context=".AgregarActivity">
 
@@ -25,7 +25,7 @@
         android:layout_marginLeft="10dp"
         android:layout_marginTop="50dp"
         android:layout_marginRight="10dp"
-        android:background="@drawable/whitte"
+
         android:orientation="vertical"
         android:paddingLeft="5dp"
         android:paddingTop="15dp">
@@ -131,7 +131,6 @@
             android:hint="Area"
             android:inputType="textPersonName"
             android:minHeight="48dp" />
-
         <EditText
             android:id="@+id/calificacionFinal"
             android:layout_width="match_parent"
@@ -150,16 +149,51 @@
             android:minHeight="48dp" />
 
 
-        <Button
-            android:id="@+id/anadir"
+
+
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_margin="20dp"
-            android:background="@color/red_200"
-            android:minHeight="48dp"
-            android:text="Añadir Participante"
-            android:textColor="@color/white"
-            tools:ignore="TouchTargetSizeCheck" />
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/anadir"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:background="@color/red_200"
+                android:text="Añadir"
+                android:textColor="@color/white"
+                tools:ignore="TouchTargetSizeCheck" />
+            <Button
+                android:id="@+id/eliminar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:background="@color/red_200"
+                android:text="Eliminar"
+                android:textColor="@color/white"
+                tools:ignore="TouchTargetSizeCheck" />
+            <Button
+                android:id="@+id/editar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:background="@color/red_200"
+                android:text="Editar"
+                android:textColor="@color/white"
+                tools:ignore="TouchTargetSizeCheck" />
+            <Button
+                android:id="@+id/ver"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_margin="10dp"
+                android:background="@color/red_200"
+                android:minHeight="48dp"
+                android:text="Ver"
+                android:textColor="@color/white"
+                tools:ignore="TouchTargetSizeCheck" />
+        </LinearLayout>
 
     </LinearLayout>
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

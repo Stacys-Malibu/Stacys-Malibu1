@@ -22,7 +22,7 @@ public class MenuMaestroActivity extends AppCompatActivity {
         buttonParticipantes.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent listIntent = new Intent(MenuMaestroActivity.this, ListAgregar2.class);
+                Intent listIntent = new Intent(MenuMaestroActivity.this, AgregarActivity.class);
                 startActivity(listIntent);
             }
         });

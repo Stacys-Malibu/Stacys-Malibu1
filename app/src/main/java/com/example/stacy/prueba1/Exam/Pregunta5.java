@@ -63,6 +63,7 @@ public class Pregunta5 extends Activity implements View.OnClickListener {
         i.putExtra("calificacion", calificacion);
     }
 
+
     public void deshabilitar(){
         d.setBackgroundColor(Color.GREEN);
         b.setBackgroundColor(Color.RED);

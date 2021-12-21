@@ -31,6 +31,7 @@ public class pregunta1 extends Activity implements View.OnClickListener {
             c.setOnClickListener(this);
             sig.setOnClickListener(this);
             sig.setEnabled(false);
+
     }
 
     @Override
@@ -56,6 +57,7 @@ public class pregunta1 extends Activity implements View.OnClickListener {
                 break;
         }
         i.putExtra("calificacion", calificacion);
+
     }
 
     public void deshabilitar(){
