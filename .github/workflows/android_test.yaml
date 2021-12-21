@@ -20,7 +20,8 @@ jobs:
 
       # Step 4: Yun your unit tests
       - name: Run Unit Tests
-        run: ./gradlew testDebugUnitTest
+        run: bash ./gradlew test --stacktrace
+
       - name: Upload APK
         uses: actions/upload-artifact@v2.1.4
         with:
