@@ -18,10 +18,11 @@ jobs:
       - name: Change wrapper permissions  // 2
         run: chmod +x ./gradlew
 
-      # Step 4: Yun your unit tests
+      # Step 1: Yun your unit tests
       - name: Run Unit Tests
         run: bash ./gradlew test --stacktrace
 
+      # Step 2: Generar APK
       - name: Build the app
         run: ./gradlew assembleDebug
 

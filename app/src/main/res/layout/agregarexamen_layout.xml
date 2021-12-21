@@ -31,9 +31,18 @@
         android:background="@drawable/whitte"
         android:orientation="vertical">
 
+        <EditText
+            android:id="@+id/categoriaExamen"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:minHeight="50dp"
+            android:textSize="30dp"
+            android:hint="Categoría" />
 
         <EditText
-            android:id="@+id/apregunta"
+            android:id="@+id/preguntaE"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
@@ -43,16 +52,16 @@
             android:hint="Pregunta" />
 
         <EditText
-            android:id="@+id/apellidoM"
+            android:id="@+id/RespuestaC"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
             android:inputType="textPersonName"
             android:minHeight="48dp"
-            android:hint="Opción A" />
+            android:hint="Respuesta Correcta" />
 
         <EditText
-            android:id="@+id/nombre1"
+            android:id="@+id/opcionb"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
@@ -61,7 +70,7 @@
             android:hint="Opción B" />
 
         <EditText
-            android:id="@+id/nombre2"
+            android:id="@+id/opcionc"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
@@ -73,13 +82,43 @@
 
 
         <Button
-            android:id="@+id/anadir"
+            android:id="@+id/anadirE"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_margin="20dp"
             android:background="@color/red_200"
             android:minHeight="48dp"
             android:text="Añadir Examen"
+            android:textColor="@color/white"
+            tools:ignore="TouchTargetSizeCheck" />
+        <Button
+            android:id="@+id/editarE"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="20dp"
+            android:background="@color/red_200"
+            android:minHeight="48dp"
+            android:text="Editar Examen"
+            android:textColor="@color/white"
+            tools:ignore="TouchTargetSizeCheck" />
+        <Button
+            android:id="@+id/eliminarE"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="20dp"
+            android:background="@color/red_200"
+            android:minHeight="48dp"
+            android:text="Eliminar Examen"
+            android:textColor="@color/white"
+            tools:ignore="TouchTargetSizeCheck" />
+        <Button
+            android:id="@+id/verExamen"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="20dp"
+            android:background="@color/red_200"
+            android:minHeight="48dp"
+            android:text="Ver Examen"
             android:textColor="@color/white"
             tools:ignore="TouchTargetSizeCheck" />
 

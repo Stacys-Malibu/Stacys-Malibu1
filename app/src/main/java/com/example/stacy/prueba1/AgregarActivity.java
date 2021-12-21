@@ -149,7 +149,7 @@ public class AgregarActivity extends AppCompatActivity {
 
                         AlertDialog.Builder builder = new AlertDialog.Builder(AgregarActivity.this);
                         builder.setCancelable(true);
-                        builder.setTitle("User Entries");
+                        builder.setTitle("Usuarios Registrados");
                         builder.setMessage(buffer.toString());
                         builder.show();
                     }
