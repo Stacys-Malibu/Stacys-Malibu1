@@ -10,10 +10,16 @@
         <entry key="..\:/Users/JORGE/StudioProjects/Stacys-Malibu1/app/src/main/res/layout/activity_lista_participantes.xml" value="0.20416666666666666" />
         <entry key="..\:/Users/JORGE/StudioProjects/Stacys-Malibu1/app/src/main/res/layout/activity_lista_participantes2.xml" value="0.20416666666666666" />
         <entry key="..\:/Users/JORGE/StudioProjects/Stacys-Malibu1/app/src/main/res/layout/activity_main.xml" value="0.1598731884057971" />
+        <entry key="..\:/Users/JORGE/StudioProjects/Stacys-Malibu1/app/src/main/res/layout/agregar2.xml" value="0.215625" />
+        <entry key="..\:/Users/JORGE/StudioProjects/Stacys-Malibu1/app/src/main/res/layout/agregar3.xml" value="0.215625" />
+        <entry key="..\:/Users/JORGE/StudioProjects/Stacys-Malibu1/app/src/main/res/layout/agregarexamen_layout.xml" value="0.215625" />
         <entry key="..\:/Users/JORGE/StudioProjects/Stacys-Malibu1/app/src/main/res/layout/agregarusuario_layout.xml" value="0.19746376811594202" />
         <entry key="..\:/Users/JORGE/StudioProjects/Stacys-Malibu1/app/src/main/res/layout/content_main.xml" value="0.1598731884057971" />
         <entry key="..\:/Users/JORGE/StudioProjects/Stacys-Malibu1/app/src/main/res/layout/fragment_first.xml" value="0.18" />
+        <entry key="..\:/Users/JORGE/StudioProjects/Stacys-Malibu1/app/src/main/res/layout/listaexamen.xml" value="0.215625" />
+        <entry key="..\:/Users/JORGE/StudioProjects/Stacys-Malibu1/app/src/main/res/layout/listaexamen2.xml" value="0.215625" />
         <entry key="..\:/Users/JORGE/StudioProjects/Stacys-Malibu1/app/src/main/res/layout/listagregar.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/JORGE/StudioProjects/Stacys-Malibu1/app/src/main/res/layout/listagregar2.xml" value="0.215625" />
         <entry key="..\:/Users/JORGE/StudioProjects/Stacys-Malibu1/app/src/main/res/layout/listamaestro_layout.xml" value="0.19746376811594202" />
         <entry key="..\:/Users/JORGE/StudioProjects/Stacys-Malibu1/app/src/main/res/layout/login_layout.xml" value="0.19746376811594202" />
         <entry key="..\:/Users/JORGE/StudioProjects/Stacys-Malibu1/app/src/main/res/layout/menu0_layout.xml" value="0.19746376811594202" />
@@ -25,6 +31,7 @@
         <entry key="..\:/Users/JORGE/StudioProjects/Stacys-Malibu1/app/src/main/res/layout/menuu_layout.xml" value="0.20416666666666666" />
         <entry key="..\:/Users/JORGE/StudioProjects/Stacys-Malibu1/app/src/main/res/layout/score.xml" value="0.20416666666666666" />
         <entry key="..\:/Users/JORGE/StudioProjects/Stacys-Malibu1/app/src/main/res/menu/menu_main.xml" value="0.17916666666666667" />
+        <entry key="..\:/Users/JORGE/StudioProjects/Stacys-Malibu1/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.2282051282051282" />
         <entry key="..\:/Users/JORGE/StudioProjects/Stacys-Malibu1/app/src/main/res/xml/network_security_config.xml" value="0.1" />
       </map>
     </option>

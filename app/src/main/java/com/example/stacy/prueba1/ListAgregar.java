@@ -64,7 +64,7 @@ public class ListAgregar extends AppCompatActivity {
 
                 AlertDialog.Builder builder = new AlertDialog.Builder(ListAgregar.this);
                 builder.setCancelable(true);
-                builder.setTitle("User Entries");
+                builder.setTitle("Usuarios registrados");
                 builder.setMessage(buffer.toString());
                 builder.show();
             }
